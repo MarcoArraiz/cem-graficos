@@ -86,7 +86,7 @@ El script principal `main.py` incluye la función `generar_grafico_barra`, que s
 
 Para cualquier consulta o soporte, puedes contactarme a través de:
 
-- Email: tu_email@example.com
+- Email: marcoarraiz@gmail.com
 - GitHub: [MarcoArraiz](https://github.com/MarcoArraiz)
 
 ## Licencia
