@@ -91,8 +91,4 @@ Para cualquier consulta o soporte, puedes contactarme a través de:
 
 ## Licencia
 
-Este proyecto está licenciado bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
-
----
-
-Este README proporciona una guía completa sobre cómo utilizar el script para generar gráficos de barras a partir de datos de mineralogía y geoquímica. Si tienes alguna duda o necesitas asistencia, no dudes en contactarme.
+Este proyecto está licenciado bajo la Licencia Creative Commons Zero v1.0 Universal. Ver el archivo `LICENSE` para más detalles.
