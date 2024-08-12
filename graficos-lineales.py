@@ -17,7 +17,10 @@ element_colors = {
     "Apatite": "#3333FF",
     "Carbonate-fluorapatite": "#33CCCC",
     "Chlorite": "#548235",
+    "Clay_Ca": "#9BC2E6",
+    "Clay_Mg": "#9BC2E6",
     "Clay": "#9BC2E6",
+    "Delafossite": "#DC47E7",
     "Diopside": "#00AA7F",
     "Dolomite": "#0099FF",
     "Dravite": "#9933FF",
@@ -37,12 +40,14 @@ element_colors = {
     "NoData3": "#FFFFFF",
     "Orthoclase": "#CB2198",
     "Plagioclase": "#A50021",
+    "Plagioclase Ca": "#A50021",
     "Phengite": "#F4B084",
     "Quartz": "#FFC000",
     "Qz-Fe": "#FFD966",
     "Qz-Ser": "#FF9900",
     "Rutile": "#757171",
     "Sericite": "#DFDA00",
+    "Sericite Ti": "#DFDA00",
     "SiNa": "#BF8F00",
     "Smithsonite": "#5F5F5F",
     "Smectite": "#65CDA9",
@@ -76,8 +81,11 @@ element_colors = {
     "Tennantite": "#7030A0",
     "Enargite": "#7030A0",
     "Tetrahedrite": "#9966FF",
+    "Rutilo": "#747474",
+    "Ferrimolybdite": "#8EA9DB",
+    "Turquoise": "#9CE0DE",
+    "Malachite-Azurite": "#339933",
 }
-
 
 def generar_grafico_lineal(df, nombre_archivo):
     # Generar lista de metros desde el inicio hasta el final
@@ -118,13 +126,8 @@ def generar_grafico_lineal(df, nombre_archivo):
             if complete_df[columna].sum() == 0:
                 continue
 
-            # Verificar si los valores de la columna son menores a 0.1%
-            if (complete_df[columna] < 0.1).all():
-                valores = complete_df[columna].values * 10000  # Convertir % a PPM
-                unidad = "PPM"
-            else:
-                valores = complete_df[columna].values
-                unidad = "%"
+            valores = complete_df[columna].values
+            unidad = "%"
 
             worksheet = workbook.add_worksheet(
                 nombres[columna].strip("'")
